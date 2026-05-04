@@ -1,66 +1,50 @@
-# Backend Master Boilerplate
+# 🌟 Backend Master Boilerplate (Modular Architecture)
 
-A professional, scalable, and robust backend boilerplate built with **Node.js**, **Express**, and **TypeScript**.
+[Bengali version below]
 
-## 🚀 Features
+This is a professional-grade Node.js backend boilerplate designed for large-scale applications. It follows the **Modular Pattern**, ensuring that your codebase remains clean, maintainable, and scalable.
 
-- **TypeScript**: Static typing for better developer experience and fewer bugs.
-- **Security**: Pre-configured with `helmet` and `cors`.
-- **Logging**: Structured logging using `winston` and request logging with `morgan`.
-- **Error Handling**: Global error handling middleware with standardized responses.
-- **Environment Variables**: Managed via `dotenv`.
-- **Code Quality**: Pre-configured with scripts for linting and formatting.
+## 🚀 Key Features
+- **TypeScript**: Robust type safety.
+- **Modular Pattern**: Organized by features (User, Auth, Product).
+- **Zod Validation**: Strict request body validation.
+- **Centralized Error Handling**: Standardized error responses.
+- **Structured Logging**: Using Winston.
+- **Clean API Responses**: Standardized success/error response formats.
 
-## 🛠️ Tech Stack
+---
 
-- **Framework**: Express.js
-- **Language**: TypeScript
-- **Validation**: Zod (recommended)
-- **Logger**: Winston
-- **Process Manager**: Nodemon (for development)
+## 🇧🇩 প্রজেক্ট ওভারভিউ (Bangla Overview)
 
-## 📦 Getting Started
+এটি একটি বড় প্রজেক্টের জন্য আদর্শ ব্যাকএন্ড স্ট্রাকচার। এখানে **Modular Pattern** ব্যবহার করা হয়েছে যাতে কোড অনেক বেশি পরিষ্কার এবং মেইনটেনেবল থাকে।
 
-### 1. Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
+### প্রধান ফিচারসমূহ:
+- **মডুলার স্ট্রাকচার**: প্রতিটি ফিচার আলাদা আলাদা ফোল্ডারে থাকে।
+- **ভ্যালিডেশন**: Zod ব্যবহার করে ইনপুট ডাটা চেক করা হয়।
+- **এরর হ্যান্ডলিং**: সব এরর এক জায়গা থেকে ম্যানেজ করা হয়।
+- **লগিং**: Winston ব্যবহার করে ডিটেইল লগ রাখা হয়।
 
-### 2. Installation
+---
+
+## 📂 Project Structure
+Refer to `MASTER_GUIDE.md` for a detailed breakdown of the folder structure and setup steps.
+
+## 🛠️ Installation
 ```bash
 npm install
 ```
 
-### 3. Environment Setup
-Create a `.env` file in the root directory (refer to `.env.example` if provided):
-```env
-PORT=5000
-NODE_ENV=development
+## 🏃‍♂️ Running the app
+```bash
+# Development mode
+npm run dev
+
+# Build the project
+npm run build
+
+# Start production server
+npm start
 ```
-
-### 4. Running the Project
-- **Development**: `npm run dev`
-- **Build**: `npm run build`
-- **Production**: `npm start`
-
-## 📂 Project Structure
-
-```text
-src/
-├── config/         # Configuration files (logger, database, etc.)
-├── controllers/    # Business logic for routes
-├── middlewares/    # Express middlewares (auth, error handler, etc.)
-├── models/         # Database models/schemas
-├── routes/         # API route definitions
-├── utils/          # Utility functions
-├── app.ts          # Express app instance
-└── server.ts       # Entry point
-```
-
-## 🛡️ API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/health` | Check server status |
 
 ## 📄 License
 MIT

@@ -1,16 +1,15 @@
 import { Router } from 'express';
+import { UserRoutes } from '../modules/User/user.route';
 
 const router = Router();
 
-router.get('/health', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'Server is healthy',
-    timestamp: new Date().toISOString(),
-  });
-});
+const moduleRoutes = [
+  {
+    path: '/users',
+    route: UserRoutes,
+  },
+];
 
-// Add more routes here
-// router.use('/users', userRouter);
+moduleRoutes.forEach((route) => router.use(route.path, route.route));
 
 export default router;
